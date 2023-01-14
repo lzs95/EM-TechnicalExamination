@@ -7,7 +7,7 @@
       class="search-input"
     />
     <!-- Loop through users -->
-    <div v-for="user in sortedUsers" :key="user.id" class="user-profile">
+    <div v-for="user in filteredUsers" :key="user.id" class="user-profile">
       <UserProfile :profile="user" />
     </div>
   </div>
@@ -43,19 +43,17 @@ export default {
 
   computed: {
     filteredUsers() {
-      if (!this.searchTerm) {
-        return this.users;
-      }
-      return this.users.filter((user) =>
-        user.name.toLowerCase().includes(this.searchTerm.toLowerCase())
-      );
-    },
+      let searchLength = this.searchTerm.length;
+      let search = this.searchTerm.toLowerCase();
+      let users = this.users;
 
-    sortedUsers() {
-      console.log(
-        this.filteredUsers.sort((a, b) => a.name.localeCompare(b.name))
-      );
-      return this.filteredUsers.sort((a, b) => a.name.localeCompare(b.name));
+      if (!this.searchTerm) {
+        return users;
+      }
+      return users.filter((user) => {
+        let userName = user.name.toLowerCase().slice(0, searchLength);
+        return userName.includes(search.toLowerCase());
+      });
     },
   },
 };
