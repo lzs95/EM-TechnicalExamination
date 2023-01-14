@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "picture": "https://randomuser.me/api/portraits/men/1.jpg",
+    "bio": "I am a software developer with 5 years of experience. I am passionate about creating user-friendly applications that solve real-world problems."
+  },
+  {
+    "id": 2,
+    "name": "Jane Doe",
+    "picture": "https://randomuser.me/api/portraits/women/4.jpg",
+    "bio": "I am a graphic designer and illustrator. I have a strong background in visual communication and a passion for creating beautiful and functional designs."
+  },
+  {
+    "id": 3,
+    "name": "Bob Johnson",
+    "picture": "https://randomuser.me/api/portraits/lego/2.jpg",
+    "bio": "I am a data scientist with experience in machine learning and statistical modeling. I am always looking for new ways to extract insights from data."
+  }
+]
