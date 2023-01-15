@@ -11,18 +11,21 @@
   <div class="user-grid">
     <!-- Loop through users -->
     <div v-for="user in filteredUsers" :key="user.id" class="user-profile">
-      <UserProfile :profile="user" />
+      <UserProfile :profile="user" @view-details="viewDetails" />
     </div>
+    <UserDetails v-if="selectedUser" :user="selectedUser" />
   </div>
 </template>
 
 <script>
 import UserProfile from "./UserProfile.vue";
+import UserDetails from "./UserDetails.vue";
 import { ref } from "vue";
 
 export default {
   components: {
     UserProfile,
+    UserDetails,
   },
   setup() {
     const searchTerm = ref("");
@@ -31,9 +34,10 @@ export default {
   data() {
     return {
       users: [],
+      selectedUser: null,
       defaultUserOrder: [],
-      sortOrder: "asc",
-      toggleCounter: 0,
+      sortOrder: "",
+      sortByBioClicks: 0,
     };
   },
 
@@ -71,6 +75,8 @@ export default {
       // Keep track of the number of clicks
       this.sortByBioClicks++;
 
+      console.log(this.sortByBioClicks);
+
       if (this.sortByBioClicks === 1) {
         this.sortOrder = "asc";
         this.users = this.users.sort((a, b) => a.bio.length - b.bio.length);
@@ -83,6 +89,10 @@ export default {
         this.sortByBioClicks = 0;
         this.users = [...this.defaultUsers];
       }
+    },
+
+    viewDetails(user) {
+      this.selectedUser = user;
     },
   },
 };
