@@ -11,21 +11,29 @@
   <div class="user-grid">
     <!-- Loop through users -->
     <div v-for="user in filteredUsers" :key="user.id" class="user-profile">
-      <UserProfile :profile="user" @view-details="viewDetails" />
+      <Modal
+        v-if="userDetails"
+        :user="userDetails"
+        ref="modal"
+        @close="closeModal"
+      />
+      <UserProfile :profile="user" />
+      <button @click="openModal(user)">View Details</button>
     </div>
-    <UserDetails v-if="selectedUser" :user="selectedUser" />
   </div>
 </template>
 
 <script>
 import UserProfile from "./UserProfile.vue";
 import UserDetails from "./UserDetails.vue";
+import Modal from "./Modal.vue";
 import { ref } from "vue";
 
 export default {
   components: {
     UserProfile,
     UserDetails,
+    Modal,
   },
   setup() {
     const searchTerm = ref("");
@@ -34,7 +42,7 @@ export default {
   data() {
     return {
       users: [],
-      selectedUser: null,
+      userDetails: null,
       defaultUserOrder: [],
       sortOrder: "",
       sortByBioClicks: 0,
@@ -91,8 +99,11 @@ export default {
       }
     },
 
-    viewDetails(user) {
-      this.selectedUser = user;
+    openModal(user) {
+      this.userDetails = user;
+    },
+    closeModal() {
+      this.userDetails = null;
     },
   },
 };
