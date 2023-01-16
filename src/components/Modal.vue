@@ -18,15 +18,10 @@
 </template>
 
 <script>
-import UserDetails from "./UserDetails.vue";
 import { ref } from "vue";
 
 export default {
   props: ["user"],
-
-  components: {
-    UserDetails,
-  },
 
   data() {
     return {

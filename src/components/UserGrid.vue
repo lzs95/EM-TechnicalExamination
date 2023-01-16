@@ -25,14 +25,12 @@
 
 <script>
 import UserProfile from "./UserProfile.vue";
-import UserDetails from "./UserDetails.vue";
 import Modal from "./Modal.vue";
 import { ref } from "vue";
 
 export default {
   components: {
     UserProfile,
-    UserDetails,
     Modal,
   },
   setup() {
