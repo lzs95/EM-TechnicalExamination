@@ -8,15 +8,17 @@
     />
     <button @click="sortByBioLength">Sort by Bio Length {{ sortOrder }}</button>
   </div>
+  <Transition name="fade">
+    <Modal
+      v-if="userDetails"
+      :user="userDetails"
+      ref="modal"
+      @close="closeModal"
+    />
+  </Transition>
   <div class="user-grid">
     <!-- Loop through users -->
     <div v-for="user in filteredUsers" :key="user.id" class="user-profile">
-      <Modal
-        v-if="userDetails"
-        :user="userDetails"
-        ref="modal"
-        @close="closeModal"
-      />
       <UserProfile :profile="user" />
       <button @click="openModal(user)">View Details</button>
     </div>
@@ -98,6 +100,7 @@ export default {
     },
 
     openModal(user) {
+      console.log(user);
       this.userDetails = user;
     },
     closeModal() {
@@ -112,5 +115,14 @@ export default {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

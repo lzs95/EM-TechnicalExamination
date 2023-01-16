@@ -1,5 +1,5 @@
 <template>
-  <div class="modal" v-show="isVisible" @click="close">
+  <div class="modal" v-show="isVisible" @click="close" v-if="user">
     <div class="modal-content">
       <img
         :src="user.picture"
@@ -33,6 +33,7 @@ export default {
     close() {
       this.isVisible = false;
       this.$emit("close");
+      console.log(this.isVisible);
     },
   },
 };
