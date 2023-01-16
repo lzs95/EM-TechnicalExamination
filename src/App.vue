@@ -1,23 +1,27 @@
 <template>
   <!-- <h1>Hello World</h1> -->
-  <UserGrid/>
+  <div name="app-body">
+    <NavBar />
+    <UserGrid />
+  </div>
 </template>
 
 <script>
-import UserGrid from './components/UserGrid.vue'
+import UserGrid from "./components/UserGrid.vue";
+import NavBar from "./components/NavBar.vue";
 
 export default {
   components: {
-    UserGrid
+    NavBar,
+    UserGrid,
   },
-  data() {
-    return {
-    }
-  },
-  methods: {
-  }
-}
+};
 </script>
 
-<style scoped>
+<style>
+.app-body {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+}
 </style>

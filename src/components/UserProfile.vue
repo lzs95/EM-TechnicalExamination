@@ -1,5 +1,5 @@
 <template>
-  <div class="user-profile" @click="viewDetails(profile)">
+  <div class="user-profile">
     <img :src="profile.picture" alt="Profile picture" class="profile-picture" />
     <h2>{{ profile.name }}</h2>
     <p>{{ truncateText(30) }}</p>
@@ -15,10 +15,6 @@ export default {
       let truncatedText = this.profile.bio.substring(0, length);
       let lastIndex = truncatedText.lastIndexOf(" ");
       return truncatedText.substring(0, lastIndex) + "...";
-    },
-
-    viewDetails(user) {
-      this.$emit("view-details", user);
     },
   },
 };
