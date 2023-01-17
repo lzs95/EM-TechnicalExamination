@@ -46,4 +46,11 @@ export default {
   border: 2px solid rgb(125, 180, 229);
   outline: none;
 }
+
+@media (max-width: 600px) {
+  .filter-drop {
+    font-size: 14px;
+    margin: 10px;
+  }
+}
 </style>
