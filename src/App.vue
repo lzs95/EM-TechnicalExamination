@@ -2,7 +2,9 @@
   <!-- <h1>Hello World</h1> -->
   <div class="app-body">
     <NavBar />
-    <UserGrid />
+    <div class="grid-wrapper">
+      <UserGrid />
+    </div>
   </div>
 </template>
 
@@ -36,10 +38,16 @@ export default {
 </script>
 
 <style>
+body {
+  margin: 0;
+  background-color: #3e5c76;
+}
 .app-body {
   display: flex;
   flex-flow: column;
-  margin-top: 5%;
-  width: 100%;
+}
+
+.grid-wrapper {
+  margin-top: 13vh;
 }
 </style>

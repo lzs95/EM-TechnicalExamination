@@ -57,19 +57,23 @@ export default {
 .user-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 6%;
+  row-gap: 50px;
+  padding: 40px;
 }
 
 .user-profile {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px;
+  user-select: none;
 }
 
 /* Responsive */
 @media (max-width: 1000px) {
   .user-grid {
     display: grid;
+    gap: 20px;
     grid-template-columns: 50% 50%;
   }
 }
@@ -77,12 +81,10 @@ export default {
   .user-grid {
     display: flex;
     flex-direction: column;
-    margin-top: calc(20% - 20px);
   }
   .user-profile {
     justify-content: center;
     align-items: center;
-    width: 90%;
   }
 }
 .fade-enter-active,

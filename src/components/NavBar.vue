@@ -50,7 +50,6 @@ export default {
     height: 10%;
     width: 100%;
     margin-bottom: 10px;
-    background-color: rgb(68, 75, 94);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   }
 }

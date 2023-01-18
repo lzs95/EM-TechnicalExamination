@@ -1,8 +1,8 @@
 <template>
   <div>
     <select class="filter-drop" v-model="sortOrder" @change="sortUsers">
-      <option value="asc">Ascending</option>
       <option value="desc">Descending</option>
+      <option value="asc">Ascending</option>
     </select>
   </div>
 </template>
@@ -17,9 +17,10 @@ export default {
   },
   data() {
     return {
-      sortOrder: "asc",
+      sortOrder: "desc",
     };
   },
+
   methods: {
     sortUsers() {
       if (this.sortOrder === "asc") {
@@ -28,6 +29,10 @@ export default {
         this.state.displayedUsers.sort((a, b) => b.bio.length - a.bio.length);
       }
     },
+  },
+
+  mounted() {
+    this.sortUsers();
   },
 };
 </script>

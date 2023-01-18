@@ -58,13 +58,12 @@ export default {
   align-items: center;
   justify-content: center;
   z-index: 100;
-  overflow: hidden;
 }
 
 .modal-content {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: #cfd2d5;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px #000;
@@ -88,8 +87,10 @@ export default {
 }
 
 .modal-bio {
-  overflow: hidden;
+  overflow: auto;
   max-height: 400px;
+  width: 100%;
   overflow-y: auto;
+  word-wrap: break-word;
 }
 </style>
