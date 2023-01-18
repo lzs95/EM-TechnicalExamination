@@ -9,7 +9,6 @@
       <div class="modal-header">
         <h2 class="modal-title">{{ user.name }}</h2>
       </div>
-      <!-- <UserDetails :user="user" /> -->
       <div class="modal-bio">
         <p>{{ user.bio }}</p>
       </div>
@@ -33,7 +32,6 @@ export default {
     close() {
       this.isVisible = false;
       this.$emit("close");
-      console.log(this.isVisible);
     },
   },
 };

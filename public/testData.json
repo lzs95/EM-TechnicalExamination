@@ -3,12 +3,12 @@
     "id": 1,
     "name": "John Doe",
     "picture": "https://randomuser.me/api/portraits/men/1.jpg",
-    "bio": "I am a software developer with 5 years of experience. I am passionate about creating user-friendly applications that solve real-world problems."
+    "bio": "I am a software developer with 5 years of experience. I am passionate about creating user-friendly applications that solve real-world problems.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
   },
   {
     "id": 2,
-    "name": "Jane Doe",
-    "picture": "https://randomuser.me/api/portraits/women/4.jpg",
+    "name": "Jessica Anderson",
+    "picture": "https://randomuser.me/api/portraits/women/9.jpg",
     "bio": "I am a graphic designer and illustrator. I have a strong background in visual communication and a passion for creating beautiful and functional designs."
   },
   {
@@ -16,5 +16,23 @@
     "name": "Bob Johnson",
     "picture": "https://randomuser.me/api/portraits/lego/2.jpg",
     "bio": "I am a data scientist with experience in machine learning and statistical modeling. I am always looking for new ways to extract insights from data."
+  },
+  {
+    "id": 4,
+    "name": "Jeremy Smith",
+    "picture": "https://randomuser.me/api/portraits/men/10.jpg",
+    "bio": "I am a software developer with experience in building web applications. I am passionate about creating user-friendly and visually appealing designs."
+  },
+  {
+    "id": 5,
+    "name": "Michael Brown",
+    "picture": "https://randomuser.me/api/portraits/lego/5.jpg",
+    "bio": "I am a data analyst with experience in data visualization and big data processing. I am always looking for new ways to make data more accessible and understandable."
+  },
+  {
+    "id": 6,
+    "name": "Jessica Williams",
+    "picture": "https://randomuser.me/api/portraits/women/14.jpg",
+    "bio": "I am a product manager with experience in creating and launching new products. I am passionate about understanding customer needs and creating solutions that meet them."
   }
 ]
