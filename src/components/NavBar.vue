@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="nav-bar">
     <div class="search-bar">
       <SearchBar />
       <UserFilter />
@@ -23,26 +23,35 @@ export default {
 </script>
 
 <style>
-nav {
+.nav-bar {
   display: flex;
   align-items: center;
-  height: 60px;
+  height: 10%;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgb(215, 215, 215);
+  background-color: rgb(68, 75, 94);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .search-bar {
   display: flex;
+  flex-direction: row;
+  gap: 3rem;
   margin: 5%;
 }
 
-@media (max-width: 600px) {
-  .nav {
-    height: 40px;
+@media (max-width: 768px) {
+  .nav-bar {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    height: 10%;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: rgb(68, 75, 94);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   }
 }
 </style>

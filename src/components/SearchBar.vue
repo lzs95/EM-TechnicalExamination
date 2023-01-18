@@ -48,10 +48,8 @@ export default {
 
 <style>
 .search-input {
-  width: 300px;
+  width: 100%;
   padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;
 }
@@ -61,10 +59,9 @@ export default {
   outline: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .search-input {
-    font-size: 24px;
-    margin: 10px;
+    font-size: 14px;
   }
 }
 </style>

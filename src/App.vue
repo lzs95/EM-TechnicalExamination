@@ -1,6 +1,6 @@
 <template>
   <!-- <h1>Hello World</h1> -->
-  <div name="app-body">
+  <div class="app-body">
     <NavBar />
     <UserGrid />
   </div>
@@ -39,6 +39,7 @@ export default {
 .app-body {
   display: flex;
   flex-flow: column;
+  margin-top: 5%;
   width: 100%;
 }
 </style>

@@ -16,7 +16,6 @@ export const useUserStore = defineStore({
 
 actions:{
   setUsers(arrUsers)  {
-    console.log("IRAN");
     return this.displayedUsers = arrUsers
   },
 

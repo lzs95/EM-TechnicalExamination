@@ -32,8 +32,6 @@ export default {
 .user-profile {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 30%;
   padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -63,10 +61,14 @@ export default {
 }
 
 .user-profile-info {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .user-profile-name {
+  margin-top: 30px;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }

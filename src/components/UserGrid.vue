@@ -13,9 +13,8 @@
       v-for="user in this.state.displayedUsers"
       :key="user.id"
       class="user-profile"
-      @click="openModal(user)"
     >
-      <UserProfile :profile="user" />
+      <UserProfile :profile="user" @click="openModal(user)" />
     </div>
   </div>
 </template>
@@ -56,25 +55,34 @@ export default {
 
 <style scoped>
 .user-grid {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: fit-content;
-  justify-content: space-between;
-  margin-top: 5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .user-profile {
-  width: 30%;
-  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
 }
 
-/* Responsive styles */
+/* Responsive */
+@media (max-width: 1000px) {
+  .user-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
 @media (max-width: 768px) {
+  .user-grid {
+    display: flex;
+    flex-direction: column;
+    margin-top: calc(20% - 20px);
+  }
   .user-profile {
-    width: calc(
-      50% - 20px
-    ); /* take up 1/2 of the available space on smaller screens */
+    justify-content: center;
+    align-items: center;
+    width: 90%;
   }
 }
 .fade-enter-active,
