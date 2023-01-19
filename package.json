@@ -6,7 +6,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test:unit": "vitest --environment jsdom --root src/"
+    "test:unit": "vitest --environment jsdom --root src/",
+    "start": "node index.js"
   },
   "dependencies": {
     "pinia": "^2.0.29",
