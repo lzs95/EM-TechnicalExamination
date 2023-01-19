@@ -1,0 +1,16 @@
+2 - Questions
+
+2.1 Write a short paragraph about what approach you would choose to make your VueJS child
+components communicate to each other directly in a more complex application.
+
+I would create a global "Event bus" object that can be accessed by all components. 
+This approach would make it so that the bus object contains methods for emitting and listening to events. Making components able to emit events back to the bus, which other components can listen for and respond to. I belive this approach allows for a more organized structure.
+
+2.2 Please provide some feedback on what improvements you would make or alternative
+approach you would take if given more time, and any difficulties you might have encountered
+during the process.
+
+If I had more time, I would've like to spend more time on the re-factoring filtering functions. I want to make it so that the we only have to filter once, or when there is a new user profile added to the list. Another points of interest to me is lazy loading ,error handling and improving on component reusability. 
+
+I found difficulties in the area of passing data between components and where to distribute functions in said components.
+

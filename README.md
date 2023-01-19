@@ -1,35 +1,51 @@
-# profile-viewer
 
-This template should help get you started developing with Vue 3 in Vite.
+# UserProfile-Viewer
 
-## Recommended IDE Setup
+Techincal Assessment
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-## Customize configuration
+## Run Locally
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Project Setup
+
+#### Install Dependencies
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+#### Compile and Hot-Reload for Development
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+#### Compile and Minify for Production
 
 ```sh
 npm run build
 ```
+    
+    
+## Demo
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+Deployed Website:
+https://master--sensational-kheer-f5c33f.netlify.app/
 
-```sh
-npm run test:unit
+Video Demo:
+https://www.loom.com/share/a852e80be4344dab8dc55dd992b4dee8
+
+Responsive Design Demo: https://www.loom.com/share/56130e3a18aa44a0a91f4f426cdcc4b5
+## Docker Guide
+
+### Build Docker Image
+
+#### Run inside root folder to build image
+```
+docker build -t [imageName] .
+```
+
+#### Run Image
+```
+docker run -p 5000:8000 [imageName]
 ```
