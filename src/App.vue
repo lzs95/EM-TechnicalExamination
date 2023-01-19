@@ -23,11 +23,14 @@ export default {
     return { state };
   },
 
-  async mounted() {
-    await fetch("testData.json")
-      .then((response) => response.json())
+  mounted() {
+    fetch("https://api.jsonbin.io/v3/b/63c8bfb7dfc68e59d5863aed/latest")
+      .then(async (response) => {
+        let result = await response.json();
+        return result;
+      })
       .then((data) => {
-        this.state.setUsers(data);
+        this.state.setUsers(data.record);
         this.state.setDeafultUsers();
       })
       .catch((err) => {
