@@ -43,7 +43,7 @@ export default {
 <style>
 body {
   margin: 0;
-  background-color: #3e5c76;
+  background-color: #ffffff;
 }
 .app-body {
   display: flex;

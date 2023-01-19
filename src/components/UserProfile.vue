@@ -39,13 +39,13 @@ export default {
   margin-bottom: 1rem;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease-in-out;
-  z-index: 1;
 }
 
 .user-profile-card:hover {
   transform: scale(1.05);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  border: 2px solid rgb(160, 255, 149);
+  border: 1px solid rgb(160, 255, 149);
+  box-shadow: 0px 0px 0px 4px rgb(160, 255, 149);
   cursor: pointer;
 }
 

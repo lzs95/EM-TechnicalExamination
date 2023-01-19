@@ -57,7 +57,7 @@ export default {
   background-color: rgba(0, 0, 0, 0.5);
   align-items: center;
   justify-content: center;
-  z-index: 100;
+  z-index: 3;
 }
 
 .modal-content {

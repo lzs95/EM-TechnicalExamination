@@ -33,6 +33,7 @@ export default {
   left: 0;
   background-color: rgb(68, 75, 94);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 100;
 }
 
 .search-bar {
